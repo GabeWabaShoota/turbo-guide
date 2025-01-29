@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabe Waba Shoota</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #222;
+        }
+        header img {
+            height: 150px;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #df8715;
+            margin: 3px 0;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #df8715;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .intro {
+            height: 100vh;
+            background-image: url('_MG_7346.JPG');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 2rem;
+            text-align: center;
+        }
+        .gallery {
+            display: slide ;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 20px;
+            background-color: #111;
+        }
+        .gallery img {
+            max-height: 100px;
+            border: 2px solid #a8d5ba;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .blog {
+            padding: 20px;
+            background-color: #222;
+        }
+        .blog h2 {
+            color: #df8715;
+        }
+        .blog-post {
+            height: fit-content;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+        .blog-post img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #222;
+            color: #a8d5ba;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+            }
+            nav.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="c:\Users\gotti\Documents\gws log-03.png" alt="Logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <h1>Welcome to Gabe Waba Shoota</h1>
+    </div>
+
+    <section class="gallery">
+        <img src="c:\Users\gotti\Documents\IMG_0275.jpg" alt="Photo 1">
+        <img src="c:\Users\gotti\Documents\IMG_1583.jpg" alt="Photo 2">
+        <img src="c:\Users\gotti\Documents\IMG_0087-2.jpg" alt="Photo 3">
+        <img src="c:\Users\gotti\Documents\IMG_7582.jpg" alt="Photo 5">
+        <img src="c:\Users\gotti\Documents\IMG_7565.jpg" alt="Photo 6">
+        <img src="c:\Users\gotti\Documents\moon n tree.JPG" alt="Photo 7">
+        <img src="c:\Users\gotti\Documents\karabo ext 9.jpg" alt="Photo 8">
+        <img src="c:\Users\gotti\Documents\kb northcliff.jpg" alt="Photo 9">
+
+    </section>
+
+    <section class="blog-gallery" id="blog">
+        <h2>Blog & Interactions</h2>
+        <div class="blog-post">
+            <img src="" alt="Blog Image 1">
+            <p>"Behind the Scenes: Capturing the perfect wedding moment."</p>
+        </div>
+        <div class="blog-post">
+            <img src="c:\Users\gotti\Documents\IMG-20230420-WA0010.jpg" alt="Blog Image 2">
+            <p>"A day in the life of a professional photographer."</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Gabe Waba Shoota | Contact: gabewabashoota@gmail.com</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('nav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
